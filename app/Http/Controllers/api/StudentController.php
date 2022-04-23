@@ -93,7 +93,8 @@ class StudentController extends Controller
     public function update(Request $request, $id)
     {
         $student = Student::find($id);
-        $student->school_id = $request->input('school      $student->first_name = $request->input('first_name');
+        $student->school_id = $request->input('school_id');
+        $student->first_name = $request->input('first_name');
         $student->last_name = $request->input('last_name');
         $student->course = $request->input('course');
         $student->year = $request->input('year');
